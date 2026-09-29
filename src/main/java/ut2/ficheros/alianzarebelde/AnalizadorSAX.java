@@ -1,8 +1,11 @@
 package ut2.ficheros.alianzarebelde;
 
 import java.io.File;
+import java.io.IOException;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.SAXException;
 
 public class AnalizadorSAX {
 
@@ -23,10 +26,10 @@ public class AnalizadorSAX {
             File archivo = new File("imperio.xml");
             parser.parse(archivo, manejador);
 
-        } catch (Exception e) {
+        } catch (IOException | ParserConfigurationException | SAXException e) {
 
             System.out.println("Error al leer el archivo XML con SAX.");
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 }
