@@ -18,10 +18,8 @@ public class AlianzaRebelde {
 
         try {
 
-            // Creamos el DOM
+            // Preparamos el analizador DOM
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-            // Creamos el analizador
             DocumentBuilder builder = factory.newDocumentBuilder();
 
             // Cargamos el archivo XML completo en memoria
